@@ -1,0 +1,15 @@
+{
+  "name": "nexora-web-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium full-stack multi-page business website for Nexora Web.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
