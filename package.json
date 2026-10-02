@@ -1,13 +1,19 @@
 {
   "name": "nexora-web-fullstack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Premium full-stack multi-page business website for Nexora Web.",
-  "main": "server.js",
+  "type": "module",
+  "description": "Cloudflare Workers + D1 premium full-stack multi-page business website for Nexora Web.",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "check": "node --check server.js"
+    "start": "wrangler dev",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "d1:apply": "wrangler d1 migrations apply nexora-web-db --remote",
+    "d1:apply:local": "wrangler d1 migrations apply nexora-web-db --local",
+    "check": "node --check worker.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   },
   "engines": {
     "node": ">=20"
